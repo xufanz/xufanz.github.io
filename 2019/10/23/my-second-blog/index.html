@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/xufanz.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/xufanz.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/xufanz.github.io/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/xufanz.github.io/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/xufanz.github.io/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/xufanz.github.io/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/xufanz.github.io/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Python学习," />
+
+
+
+
+
+  <link rel="alternate" href="/xufanz.github.io/atom.xml" title="栩凡的博客" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="Python是脚本语言，脚本语言(Scripting language)是电脑编程语言，因此也能让开发者藉以编写出让电脑听命行事的程序。以简单的方式快速完成某些复杂的事情通常是创造脚本语言的重要原则，基于这项原则，使得脚本语言通常比 C语言、C++语言 或 Java 之类的系统编程语言要简单容易。 0.第一节Alt +N  上一条语句 Alt+P     下一条语句">
+<meta name="keywords" content="Python学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python学习第一课">
+<meta property="og:url" content="https:&#x2F;&#x2F;xufanz.github.io&#x2F;2019&#x2F;10&#x2F;23&#x2F;my-second-blog&#x2F;index.html">
+<meta property="og:site_name" content="栩凡的博客">
+<meta property="og:description" content="Python是脚本语言，脚本语言(Scripting language)是电脑编程语言，因此也能让开发者藉以编写出让电脑听命行事的程序。以简单的方式快速完成某些复杂的事情通常是创造脚本语言的重要原则，基于这项原则，使得脚本语言通常比 C语言、C++语言 或 Java 之类的系统编程语言要简单容易。 0.第一节Alt +N  上一条语句 Alt+P     下一条语句">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-26T13:54:20.775Z">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/xufanz.github.io/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://xufanz.github.io/2019/10/23/my-second-blog/"/>
+
+
+
+
+
+  <title>python学习第一课 | 栩凡的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/xufanz.github.io/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栩凡的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">人类的本质都是复读机</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/xufanz.github.io/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/xufanz.github.io/about%20/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/xufanz.github.io/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/xufanz.github.io/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/xufanz.github.io/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/xufanz.github.io/schedule/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xufanz.github.io/xufanz.github.io/2019/10/23/my-second-blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhang yangyang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/xufanz.github.io/images/zyy.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栩凡的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">python学习第一课</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-23T21:33:16+08:00">
+                2019-10-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+		  
+		    <span class="post-meta-divider">|</span>
+		    <span id="busuanzi_value_page_pv"></span>次阅读
+		  
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>Python是脚本语言</strong>，脚本语言(Scripting language)是电脑编程语言，因此也能让开发者藉以编写出让电脑听命行事的程序。以简单的方式快速完成某些复杂的事情通常是创造脚本语言的重要原则，基于这项原则，使得脚本语言通常比 C语言、C++语言 或 Java 之类的系统编程语言要简单容易。</p>
+<h1 id="0-第一节"><a href="#0-第一节" class="headerlink" title="0.第一节"></a>0.第一节</h1><p>Alt +N  上一条语句</p>
+<p>Alt+P     下一条语句</p>
+<a id="more"></a>
+
+<p>print(“输入文字”)      \输出</p>
+<p>print语法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"well water"</span> + <span class="string">" river"</span>)</span><br><span class="line">well water river</span><br><span class="line">print(<span class="string">"tgshg"</span>*<span class="number">8</span>)</span><br><span class="line">输出<span class="number">8</span>遍tgshg tgshg tgshg tgshg tgshg tgshg tgshg tgshg tgshg</span><br></pre></td></tr></table></figure>
+
+<p>转页符  <code>\</code>      \实现换行功能</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a><strong>问题</strong></h2><p><strong>1.IDLE 是什么？</strong></p>
+<p> IDLE是一个Python Shell，shell的意思就是“外壳”，基本上来说，就是一个通过键入文本与程序交互的途径！像我们Windows那个cmd窗口，像Linux那个黑乎乎的命令窗口，他们都是shell，利用他们，我们就可以给操作系统下达命令。同样的，我们可以利用IDLE这个shell与Python进行互动。</p>
+<p> <strong>2. print() 的作用是什么？</strong></p>
+<p> print() 会在输出窗口中显示一些文本（在这一讲中，输出窗口就是IDLE shell窗口）。</p>
+<p> <strong>3. Python 中表示乘法的符号是什么？</strong></p>
+<p> Python中的乘号是*（星号）。</p>
+<p> <strong>4. 为什么 &gt;&gt;&gt;print(‘I love fishc.com ‘ * 5) 可以正常执行，但 &gt;&gt;&gt;print(‘I love fishc.com ‘ + 5) 却报错？</strong></p>
+<p> 在 Python 中不能把两个完全不同的东西加在一起，比如说数字和文本，正是这个原因，&gt;&gt;&gt;print(‘I love fishc.com ‘ + 5) 才会报错。这就像是在说“五只小甲鱼加上苍井空会是多少？”一样没有多大意义，结果可能是五，可能是六，也可能是八！不过乘以一个整数来翻倍就具有一定的意义了，前边的例子就是将 “I love fishc.com” 这个字符串打印五次。</p>
+<p> <strong>5. 如果我需要在一个字符串中嵌入一个双引号，正确的做法是？</strong></p>
+<p> 你有两个选择：可以利用反斜杠（\）对双引号转义<code>:\&quot;</code>，或者用单引号引起这个字符串。例如：’ I l”o”ve fishc.com ‘。</p>
+<h1 id="1-第二节"><a href="#1-第二节" class="headerlink" title="1.第二节"></a>1.第二节</h1><h2 id="1-1BIF（内置函数）"><a href="#1-1BIF（内置函数）" class="headerlink" title="1.1BIF（内置函数）"></a>1.1BIF（内置函数）</h2><p>print</p>
+<p>int————将输入的变量变为一个整型</p>
+<p>输入<code>dir(_builtins_)</code>调出所有内置函数</p>
+<p><code>help(input)</code>———-看内置函数的用处和用法</p>
+<h2 id="1-2"><a href="#1-2" class="headerlink" title="1.2"></a>1.2</h2><p><strong>2.</strong> <strong>在</strong> <strong>Python</strong> <strong>看来：**</strong>‘FishC’** <strong>和</strong> <strong>‘fishc’</strong> <strong>一样吗？</strong></p>
+<p> 不一样，因为 Python 是一个“敏感的小女孩”，所以不要试图欺骗她，对 Python 来说，fishc 和 FishC 是完全不同的两个名字，所以编程的时候一定要当心。不过 Python 会帮助解决可能因此出现的问题，例如只有当标识符已经赋值后（还记得吗，小甲鱼在课堂中说过 Python 的变量是不用先声明的）才能在代码中使用，未赋值的标识符直接使用会导致运行时错误，所以你很快就可以根据经验发现此问题。</p>
+<p> <strong>3.</strong> <strong>在小甲鱼看来，**</strong>Python** <strong>中什么是最重要的？你赞同吗？</strong></p>
+<p> 缩进！在小甲鱼看来，缩进是 Python 的灵魂，缩进的严格要求使得 Python 的代码显得非常精简并且有层次（小甲鱼阅读过很多大牛的代码，那个乱……C语言不是有国际乱码大赛嘛……）。</p>
+<p> 所以在 Python 里对待缩进代码要十分小心，如果没有正确地缩进，代码所做的事情可能和你的期望相去甚远（就像C语言里边括号打错了位置）。</p>
+<p> 如果在正确的位置输入冒号“:”，IDLE 会自动将下一行缩进！</p>
+<p> <strong>4.</strong> <strong>这节课的例子中出现了**</strong>“=”<strong><strong>和</strong></strong>“==”<strong><strong>，他们表示不同的含义，你在编程的过程中会不小心把</strong></strong>“==”<strong><strong>误写成</strong></strong>“=”<strong>**吗？有没有好的办法可以解决这个问题呢？</strong></p>
+<p> C语言的话，如果 if( c == 1 ) 写成 if( c = 1 )，程序就完全不按程序员原本的目的去执行，但在 Python 这里，不好意思，行不通，语法错误！Python 不允许 if 条件中赋值，所以 if c = 1: 会报错！</p>
+<p> 小甲鱼觉得这种做法可以非常有效的防止程序员因为打炮、熬夜等问题导致粗心的 BUG ，并且这类 BUG 杀伤力都巨大！</p>
+<p> <strong>5.</strong> <strong>你听说过**</strong>“<strong><strong>拼接</strong></strong>”<strong>**这个词吗？</strong></p>
+<p> 在一些编程语言，我们可以将两个字符串“相加”在一起，如：’I’ + ‘Love’ + ‘FishC’ 会得到 ‘ILoveFishC’，在 Python 里，这种做法叫做拼接字符串。</p>
+<p><strong>0.</strong> <strong>编写程序：**</strong>hello.py<strong><strong>，要求用户输入姓名并打印</strong></strong>“<strong><strong>你好，姓名！</strong></strong>”**</p>
+<p>\1. name = input(“请输入您的姓名：”)</p>
+<p>\2. print(‘你好，’ + name + ‘!’)</p>
+<p>复制代码</p>
+<p> <strong>1.</strong> <strong>编写程序：**</strong>calc.py** <strong>要求用户输入**</strong>1<strong><strong>到</strong></strong>100<strong><strong>之间数字并判断，输入符合要求打印</strong></strong>“<strong><strong>你妹好漂亮</strong></strong>”<strong><strong>，不符合要求则打印</strong></strong>“<strong><strong>你大爷好丑</strong></strong>”**</p>
+<p>\1. temp = input(“请输入1到100之间的数字：”)</p>
+<p>\2. num = int(temp)</p>
+<p>\3. if 1 &lt;= num &lt;= 100:</p>
+<p>\4.   print(‘你妹好漂亮^_^’)</p>
+<p>\5. else:</p>
+<p>\6.   print(‘你大爷好丑T_T’)</p>
+<p>复制代码</p>
+<h1 id="2-第三节变量和字符串"><a href="#2-第三节变量和字符串" class="headerlink" title="2.第三节变量和字符串"></a>2.第三节变量和字符串</h1><p>teacher = ‘666’     \=赋值</p>
+<p>变量赋值不能以数字开头</p>
+<p>变量使用之前必须先赋值</p>
+<p>大小写命名是不同的</p>
+<p>字符串拼接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">myteacher =&apos;555&apos;</span><br><span class="line">yourteacher =&apos;666&apos;</span><br><span class="line">ourteacher =myteacher +yourteacher</span><br><span class="line">prinit(ourteacher)</span><br><span class="line">555666</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h2 id="2-1字符串"><a href="#2-1字符串" class="headerlink" title="2.1字符串"></a>2.1字符串</h2><p>字符串就是文本，文本和数字不一样，引号内的都是文本</p>
+<p>创建字符串使用引号，单引双引都可以，成对就行</p>
+<p>字符串中出现单引号双引号</p>
+<p>1.使用转义符号（\）,对引号进行转义</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&apos;let\&apos;s go !!!&apos;</span><br></pre></td></tr></table></figure>
+
+<p>2.方法二</p>
+<p>打开路径时，反斜杠（\）会转义，用两个反斜杠，对自身进行转义</p>
+<p>引入<strong>原始字符串</strong>，在前边加入r         *<em>注意，原始字符串结尾不能加\ *</em></p>
+<p><code>str =r ‘C：\program\gggg’</code></p>
+<p><strong>长字符串</strong></p>
+<p>三重引号字符串</p>
+<p>‘’‘</p>
+<p>+好地方破口烘烤和判断</p>
+<p>会尽快发货开盘后看看，</p>
+<p>刚开始的空白</p>
+<p>返回南方</p>
+<p>符合</p>
+<p>’‘’</p>
+<p><strong>5.</strong> <strong>如果非要在原始字符串结尾输入反斜杠，可以如何灵活处理？</strong></p>
+<p>\1. &gt;&gt;&gt;str = r’C:\Program Files\FishC\Good’’\‘</p>
+<p>复制代码</p>
+<h1 id="3-第四节"><a href="#3-第四节" class="headerlink" title="3.第四节"></a>3.第四节</h1><h2 id="3-1random模块"><a href="#3-1random模块" class="headerlink" title="3.1random模块"></a>3.1random模块</h2><p>randint()，返回一个随机的整数</p>
+<p>randint(1,10)生成一个1-10的随机数</p>
+<h2 id="3-2条件分支"><a href="#3-2条件分支" class="headerlink" title="3.2条件分支"></a>3.2条件分支</h2><p>！=            左边不等于右边</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if 条件：</span><br><span class="line">	条件为真执行</span><br><span class="line">else：</span><br><span class="line">	条件为假执行</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h2 id="3-3While循环"><a href="#3-3While循环" class="headerlink" title="3.3While循环"></a>3.3While循环</h2><p>while 条件：</p>
+<p>条件为真执行操作</p>
+<p>and逻辑操作符可以将任意表达式连接在一起</p>
+<p>布尔类型：true\false</p>
+<h2 id="3-4"><a href="#3-4" class="headerlink" title="3.4"></a>3.4</h2><p>逻辑操作符有个有趣的特性：在不需要求值的时候不进行操作。这么说可能比较“高深”，举个例子，表达式 x and y，需要 x 和 y 两个变量同时为真(True)的时候，结果才为真。因此，如果当 x 变量得知是假(False)的时候，表达式就会立刻返回 False，而不用去管 y 变量的值。</p>
+<p> 这种行为被称为短路逻辑（short-circuit logic）或者惰性求值（lazy evaluation），这种行为同样也应用与 or 操作符，这个后边的课程小甲鱼会讲到，不急。</p>
+<p> 实际上，Python 的做法是如果 x 为假，表达式会返回 x 的值(0)，否则它就会返回 y 的值（例子参考楼上那题）。</p>
+<p> <strong>动动手答案：</strong></p>
+<p><strong>本帖隐藏的内容</strong></p>
+<p><strong>0.</strong> <strong>完善第二个改进要求（为用户提供三次机会尝试，机会用完或者用户猜中答案均退出循环）并改进视频中小甲鱼的代码。</strong></p>
+<p> 需要注意的地方在代码中已经注释！</p>
+<p>\1. import random</p>
+<p>\2. times = 3</p>
+<p>\3. secret = random.randint(1,10)</p>
+<p>\4. print(‘——————我爱鱼C工作室——————‘)</p>
+<p>\5. # 这里先给guess赋值（赋一个绝对不等于secret的值）</p>
+<p>\6. guess = 0</p>
+<p>\7. # print()默认是打印完字符串会自动添加一个换行符，end=” “参数告诉print()用空格代替换行</p>
+<p>\8. # 嗯，小甲鱼觉得富有创意的你应该会尝试用 end=”JJ”？</p>
+<p>\9. print(“不妨猜一下小甲鱼现在心里想的是哪个数字：”, end=” “)</p>
+<p>\10. while (guess != secret) and (times &gt; 0):</p>
+<p>\11.   temp = input()</p>
+<p>\12.   guess = int(temp)</p>
+<p>\13.   times = times - 1 # 用户每输入一次，可用机会就-1</p>
+<p>\14.   if guess == secret:</p>
+<p>\15.      print(“我草，你是小甲鱼心里的蛔虫吗？！”)</p>
+<p>\16.      print(“哼，猜中了也没有奖励！”)</p>
+<p>\17.   else:</p>
+<p>\18.      if guess &gt; secret:</p>
+<p>\19.        print(“哥，大了大了<del>~</del>“)</p>
+<p>\20.      else:</p>
+<p>\21.        print(“嘿，小了，小了<del>~</del>“)</p>
+<p>\22.      if times &gt; 0:</p>
+<p>\23.        print(“再试一次吧：”, end=” “)</p>
+<p>\24.      else:</p>
+<p>\25.        print(“机会用光咯T_T”)</p>
+<p>\26. print(“游戏结束，不玩啦^_^”)</p>
+<h1 id="4-Python数值类型"><a href="#4-Python数值类型" class="headerlink" title="4.Python数值类型"></a>4.Python数值类型</h1><p>整型：整数（长整型）</p>
+<p>布尔类型：true\false</p>
+<p>1,0</p>
+<p>1+0=1</p>
+<p>1*0=0</p>
+<p>浮点型：小数</p>
+<p>e记法（科学计数法）</p>
+<p>1.55e10</p>
+<p>=15500000000</p>
+<h2 id="4-1类型转换"><a href="#4-1类型转换" class="headerlink" title="4.1类型转换"></a>4.1类型转换</h2><p>整数——-浮点数</p>
+<p>整数——-字符串</p>
+<p>整数———浮点数</p>
+<p>int（）可以将浮点数、字符串转换为整数.（转换浮点数的时候，去掉小数）</p>
+<p>float()可以将整数、字符串转换为浮点数</p>
+<p>str()可以将数或任意其他类型转换为字符串</p>
+<h2 id="4-2获取变量类型"><a href="#4-2获取变量类型" class="headerlink" title="4.2获取变量类型"></a>4.2获取变量类型</h2><p>type（）获取变量类型</p>
+<p>isinstance(a,str)———-输出布尔类型</p>
+<h2 id="4-3"><a href="#4-3" class="headerlink" title="4.3"></a>4.3</h2><p><strong>0. 在 Python 中，int 表示整型，那你还记得 bool、float 和 str 分别表示什么吗？</strong></p>
+<p> bool 表示布尔类型<br> float 表示浮点型<br> str 表示字符串</p>
+<p> <strong>1.</strong> <strong>你知道为什么布尔类型(bool)的 True 和 False 分别用 1 和 0 来代替吗？</strong></p>
+<p> 你可能听说过计算机是很“笨”的，究其根本是因为它只认识二进制数，所以所有的编程语言最终都会转换成简单的二进制序列给CPU按照一定的规则解析。<br> 由于二进制只有两个数：0 和 1，因此用 0 和 1 来表示 False 和 True 再适合不过了，因为不用浪费资源在转换的过程上！</p>
+<p> <strong>2.</strong> <strong>使用 int() 将小数转换为整数，结果是向上取整还是向下取整呢？</strong></p>
+<p> 我们可爱的小甲鱼说了，小数取整会采用比较暴力的截断方式，即向下取整。（注：5.5向上取整为6，向下取整为5）</p>
+<p> <strong>3.</strong> <strong>我们人类思维是习惯于“四舍五入”法，你有什么办法使得 int() 按照“四舍五入”的方式取整吗？</strong></p>
+<p> int() 固然没那么“聪明”，但机器是死的，鱼油是活的！<br> 5.4 “四舍五入”结果为：5，int(5.4+0.5) == 5<br> 5.6 “四舍五入”结果为：6，int(5.6+0.5) == 6<br> 大家看明白了吗？</p>
+<p> <strong>4.</strong> <strong>取得一个变量的类型，视频中介绍可以使用 type() 和 isinstance()，你更倾向于使用哪个？</strong></p>
+<p> 建议使用 isinstance()，因为它的返回结果比较直接，另外 type() 其实并没有你想象的那么简单，我们后边会讲到。</p>
+<p> <strong>5. Python3</strong> <strong>可以给变量命名中文名，知道为什么吗？</strong></p>
+<p> Pyhton3 源码文件默认使用utf-8编码（支持中文），这就使得以下代码是合法的：<br> &gt;&gt;&gt; 小甲鱼 = ‘我爱你’<br> &gt;&gt;&gt; print(小甲鱼)<br> &gt;&gt;&gt; 我爱你</p>
+<p> <strong>6.</strong> <strong>【该题针对零基础的鱼油】你觉得这个系列教学有难度吗？</strong></p>
+<p> 如果有不懂的问题，请在此处提问：<a href="http://bbs.fishc.com/forum-173-1.html" target="_blank" rel="noopener">http://bbs.fishc.com/forum-173-1.html</a></p>
+<p> 另外需要小甲鱼在视频讲解的方面做哪方面改进请回帖告之！</p>
+<p> <strong>动动手答案：</strong></p>
+<p><strong>本帖隐藏的内容</strong></p>
+<p><strong>0.</strong> <strong>针对视频中小甲鱼提到的小漏洞，再次改进我们的小游戏：当用户输入错误类型的时候，及时提醒用户重新输入，防止程序崩溃。</strong></p>
+<p> 需要注意的地方在代码中已经注释！</p>
+<p>\1. import random</p>
+<p>\2. times = 3</p>
+<p>\3. secret = random.randint(1,10)</p>
+<p>\4. print(‘——————我爱鱼C工作室——————‘)</p>
+<p>\5. guess = 0</p>
+<p>\6. print(“不妨猜一下小甲鱼现在心里想的是哪个数字：”, end=” “)</p>
+<p>\7. while (guess != secret) and (times &gt; 0):</p>
+<p>\8.   temp = input()</p>
+<p>\9.   while not temp.isdigit():</p>
+<p>\10.      temp = input(“抱歉，您的输入有误，请输入一个整数：”)</p>
+<p>\11.   guess = int(temp)</p>
+<p>\12.   times = times - 1 # 用户每输入一次，可用机会就-1</p>
+<p>\13.   if guess == secret:</p>
+<p>\14.      print(“我草，你是小甲鱼心里的蛔虫吗？！”)</p>
+<p>\15.      print(“哼，猜中了也没有奖励！”)</p>
+<p>\16.   else:</p>
+<p>\17.      if guess &gt; secret:</p>
+<p>\18.        print(“哥，大了大了<del>~</del>“)</p>
+<p>\19.      else:</p>
+<p>\20.        print(“嘿，小了，小了<del>~</del>“)</p>
+<p>\21.      if times &gt; 0:</p>
+<p>\22.        print(“再试一次吧：”, end=” “)</p>
+<p>\23.      else:</p>
+<p>\24.        print(“机会用光咯T_T”)</p>
+<p>\25. print(“游戏结束，不玩啦^_^”)</p>
+<p>复制代码</p>
+<p>**</p>
+<p>** <strong>1.</strong> <strong>写一个程序，判断给定年份是否为闰年。</strong></p>
+<p>\1. temp = input(‘请输入一个年份：’)</p>
+<p>\2. while not temp.isdigit():</p>
+<p>\3.   temp = input(“抱歉，您的输入有误，请输入一个整数：”)</p>
+<p>\4.  </p>
+<p>\5. year = int(temp)</p>
+<p>\6. if year/400 == int(year/400):</p>
+<p>\7.   print(temp + ‘ 是闰年！’)</p>
+<p>\8. else:</p>
+<p>\9.   if (year/4 == int(year/4)) and (year/100 != int(year/100)):</p>
+<p>\10.      print(temp + ‘ 是闰年！’)</p>
+<p>\11.   else:</p>
+<p>\12.      print(temp + ‘ 不是闰年！’)</p>
+
+      
+    </div>
+		
+	
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/xufanz.github.io/tags/Python%E5%AD%A6%E4%B9%A0/" rel="tag"># Python学习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/xufanz.github.io/2019/10/20/my-first-blog/" rel="next" title="用Hexo+Github搭建自己的个人博客(纯小白)">
+                <i class="fa fa-chevron-left"></i> 用Hexo+Github搭建自己的个人博客(纯小白)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/xufanz.github.io/2019/10/25/my-third-blog/" rel="prev" title="python学习第二课">
+                python学习第二课 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/xufanz.github.io/images/zyy.jpg"
+                alt="zhang yangyang" />
+            
+              <p class="site-author-name" itemprop="name">zhang yangyang</p>
+              <p class="site-description motion-element" itemprop="description">不知道说点啥，就祝大家新年快乐吧！！！</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/xufanz.github.io/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/xufanz.github.io/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/xufanz.github.io/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/xufanz.github.io/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/xufanz" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1459539648@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0-第一节"><span class="nav-text">0.第一节</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-text">问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-第二节"><span class="nav-text">1.第二节</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1BIF（内置函数）"><span class="nav-text">1.1BIF（内置函数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2"><span class="nav-text">1.2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-第三节变量和字符串"><span class="nav-text">2.第三节变量和字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1字符串"><span class="nav-text">2.1字符串</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-第四节"><span class="nav-text">3.第四节</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1random模块"><span class="nav-text">3.1random模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2条件分支"><span class="nav-text">3.2条件分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3While循环"><span class="nav-text">3.3While循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4"><span class="nav-text">3.4</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Python数值类型"><span class="nav-text">4.Python数值类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1类型转换"><span class="nav-text">4.1类型转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2获取变量类型"><span class="nav-text">4.2获取变量类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3"><span class="nav-text">4.3</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-[object Object]"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">张洋洋</span>
+
+  
+</div>
+
+
+
+
+
+
+
+<div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style='display:none'>
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客啦
+</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/xufanz.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/xufanz.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/xufanz.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/xufanz.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/xufanz.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/xufanz.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/xufanz.github.io/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/xufanz.github.io/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/xufanz.github.io/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/xufanz.github.io/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/xufanz.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/xufanz.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/xufanz.github.io/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/xufanz.github.io/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+<!--动态线条背景-->
+<script type="text/javascript"
+color="54,153,232" opacity='0.5' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!--人体时钟背景透明-->
+<script charset="Shift_JIS" 
+src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js">
+</script>
+
+

@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/xufanz.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/xufanz.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/xufanz.github.io/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/xufanz.github.io/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/xufanz.github.io/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/xufanz.github.io/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/xufanz.github.io/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo搭建blog," />
+
+
+
+
+
+  <link rel="alternate" href="/xufanz.github.io/atom.xml" title="栩凡的博客" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="本人完全新手小白，用时两天通过看网上搭博客的帖子，趟了很多坑，因此记录一下自己搭成功以及在过程中出错的整个流程。 1.搭建环境1.安装Git工具在Git官网上找到相应版本安装，直接搜git就能出来官网；或者点此链接https:&#x2F;&#x2F;git-scm.com&#x2F;downloads 直接下载。">
+<meta name="keywords" content="Hexo搭建blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用Hexo+Github搭建自己的个人博客(纯小白)">
+<meta property="og:url" content="https:&#x2F;&#x2F;xufanz.github.io&#x2F;2019&#x2F;10&#x2F;20&#x2F;my-first-blog&#x2F;index.html">
+<meta property="og:site_name" content="栩凡的博客">
+<meta property="og:description" content="本人完全新手小白，用时两天通过看网上搭博客的帖子，趟了很多坑，因此记录一下自己搭成功以及在过程中出错的整个流程。 1.搭建环境1.安装Git工具在Git官网上找到相应版本安装，直接搜git就能出来官网；或者点此链接https:&#x2F;&#x2F;git-scm.com&#x2F;downloads 直接下载。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xufanz&#x2F;markdown-photo&#x2F;b7df012f57e9c257f7d8b46a4217960f290d0095&#x2F;1.png?token=ALBJ4ARUNPBZ3BWJSBLSNTK5VVIDO">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xufanz&#x2F;markdown-photo&#x2F;master&#x2F;3&#x2F;2.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xufanz&#x2F;markdown-photo&#x2F;master&#x2F;3&#x2F;3.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xufanz&#x2F;markdown-photo&#x2F;master&#x2F;3&#x2F;4.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xufanz&#x2F;markdown-photo&#x2F;master&#x2F;3&#x2F;5.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xufanz&#x2F;markdown-photo&#x2F;master&#x2F;3&#x2F;6.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xufanz&#x2F;markdown-photo&#x2F;master&#x2F;3&#x2F;7.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xufanz&#x2F;markdown-photo&#x2F;master&#x2F;3&#x2F;8.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xufanz&#x2F;markdown-photo&#x2F;master&#x2F;3&#x2F;11.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xufanz&#x2F;markdown-photo&#x2F;master&#x2F;3&#x2F;66.png">
+<meta property="og:updated_time" content="2019-10-27T07:19:30.514Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;xufanz&#x2F;markdown-photo&#x2F;b7df012f57e9c257f7d8b46a4217960f290d0095&#x2F;1.png?token=ALBJ4ARUNPBZ3BWJSBLSNTK5VVIDO">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/xufanz.github.io/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://xufanz.github.io/2019/10/20/my-first-blog/"/>
+
+
+
+
+
+  <title>用Hexo+Github搭建自己的个人博客(纯小白) | 栩凡的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/xufanz.github.io/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栩凡的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">人类的本质都是复读机</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/xufanz.github.io/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/xufanz.github.io/about%20/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/xufanz.github.io/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/xufanz.github.io/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/xufanz.github.io/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/xufanz.github.io/schedule/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xufanz.github.io/xufanz.github.io/2019/10/20/my-first-blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhang yangyang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/xufanz.github.io/images/zyy.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栩凡的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">用Hexo+Github搭建自己的个人博客(纯小白)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-20T21:59:27+08:00">
+                2019-10-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/xufanz.github.io/categories/%E6%8A%80%E6%9C%AF%E8%B4%B4/" itemprop="url" rel="index">
+                    <span itemprop="name">技术贴</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+		  
+		    <span class="post-meta-divider">|</span>
+		    <span id="busuanzi_value_page_pv"></span>次阅读
+		  
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本人完全新手小白，用时两天通过看网上搭博客的帖子，趟了很多坑，因此记录一下自己搭成功以及在过程中出错的整个流程。</p>
+<h1 id="1-搭建环境"><a href="#1-搭建环境" class="headerlink" title="1.搭建环境"></a>1.搭建环境</h1><h2 id="1-安装Git工具"><a href="#1-安装Git工具" class="headerlink" title="1.安装Git工具"></a>1.安装Git工具</h2><p>在Git官网上找到相应版本安装，直接搜git就能出来官网；或者点此链接<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a> 直接下载。</p>
+<a id="more"></a>
+<h2 id="2-安装-Node-js"><a href="#2-安装-Node-js" class="headerlink" title="2.安装 Node.js"></a>2.安装 Node.js</h2><p>一样的步骤，直接搜Node.js就可以搜到官网；或者点此链接<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a> 直接下载。安装过程中无脑下一步就行了（反正我是这样，好像也没出啥问题）</p>
+<h1 id="2-用Hexo在本地搭建博客"><a href="#2-用Hexo在本地搭建博客" class="headerlink" title="2.用Hexo在本地搭建博客"></a>2.用Hexo在本地搭建博客</h1><p>本章主要介绍如何用HEXO在本地搭建个人博客以及如何更换博客主题。<em>（本章第三部分关于个人主题可以选择不换，直接跳到下一章）</em></p>
+<h2 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1.安装Hexo"></a>1.安装Hexo</h2><p>安装了git之后，桌面上或者应用程序中会出现Git GUI,Git CMD,Git Bash。<br><img src="https://raw.githubusercontent.com/xufanz/markdown-photo/b7df012f57e9c257f7d8b46a4217960f290d0095/1.png?token=ALBJ4ARUNPBZ3BWJSBLSNTK5VVIDO" alt="jietu"></p>
+<p>点开Git Bash,执行以下命令：<br><code>npm install -g hexo-cli</code><br>安装之后关掉Git Bash</p>
+<h2 id="2-创建博客目录"><a href="#2-创建博客目录" class="headerlink" title="2.创建博客目录"></a>2.创建博客目录</h2><ul>
+<li>接下来就要创建放置博客文件的文件夹： <code>xufanz.github.io</code>，<strong>注意，格式必须是<code>名称.github.io</code></strong> <em>名称不要乱起，好记的就行，这是将来的域名，也是Github的用户名，切记切记。</em>  例如我的是<code>E:\博客\xufanz.github.io</code></li>
+<li>进入刚刚创建的文件夹，即<code>E:\博客\xufanz.github.io</code> 内，右击鼠标，选择git bush,依次输入：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo i</span><br><span class="line">npm install</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+  然后用浏览器访问<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> ，此时，我们的博客已经初步建成了。</li>
+</ul>
+<h2 id="3-主题切换"><a href="#3-主题切换" class="headerlink" title="3.主题切换"></a>3.主题切换</h2><p>github上有许许多多主题，我们以next主题为例。<br>在建立的文件夹，即<code>E:\博客\xufanz.github.io</code> 内，右击鼠标，选择git bush,输入：</p>
+<pre><code>`git clone https://github.com/iissnan/hexo-theme-next themes/next`</code></pre><p>下载完成后，打开配置文件，（可以选择用记事本打开，也可以用Notepad++），配置文件就是文件夹<code>E:\博客\xufanz.github.io</code>内的<code>_config.yml</code> 文件，把landscape改为next。</p>
+<p><img src="https://raw.githubusercontent.com/xufanz/markdown-photo/master/3/2.png" alt="tu"></p>
+<p>Next主题有多种风格。</p>
+<ul>
+<li>Muse - 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白</li>
+<li>Mist - Muse 的紧凑版本，整洁有序的单栏外观</li>
+<li>Pisces - 双栏 Scheme，小家碧玉似的清新</li>
+</ul>
+<p>我们可以自主选择不同风格，打开<code>E:\博客\xufanz.github.io\theme\next</code>内的<code>_config.yml</code> 文件，找到如图所示的地方，选择不同风格。</p>
+<p><img src="https://raw.githubusercontent.com/xufanz/markdown-photo/master/3/3.png" alt="tu"></p>
+<p>在文件夹内打开git bash并依次输入：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><br>  重新用浏览器访问<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> ，此时，我们的博客主题已经完成更换了。</p>
+<h1 id="3-部署本地文件到github"><a href="#3-部署本地文件到github" class="headerlink" title="3.部署本地文件到github"></a>3.部署本地文件到github</h1><h2 id="1-注册github"><a href="#1-注册github" class="headerlink" title="1.注册github"></a>1.注册github</h2><p>如果有的话直接进行下一步</p>
+<p>没有直接点此链接进行注册<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><br><strong>注册时注意，GitHub用户名需要与你的本地仓库文件夹名前缀一致</strong>，比如我的文件夹为<code>E:\博客\xufanz.github.io</code>则用户名最好设为 <strong>xufanz</strong></p>
+<h2 id="2-建立远程仓库（配置Github）"><a href="#2-建立远程仓库（配置Github）" class="headerlink" title="2.建立远程仓库（配置Github）"></a>2.建立远程仓库（配置Github）</h2><p>在github上创建一个新项目</p>
+<p><img src="https://raw.githubusercontent.com/xufanz/markdown-photo/master/3/4.png" alt="tu"></p>
+<p><img src="https://raw.githubusercontent.com/xufanz/markdown-photo/master/3/5.png" alt="tu"></p>
+<p>项目名与本地仓库文件夹名一致，注意！！！<strong>与你的github用户名也要一致</strong> 按图中的步骤建立出远程仓库后，点击settings。</p>
+<p><img src="https://raw.githubusercontent.com/xufanz/markdown-photo/master/3/6.png" alt="tu"></p>
+<p>一直往下滑，翻到如图所示地方，创建Page。</p>
+<p><img src="https://raw.githubusercontent.com/xufanz/markdown-photo/master/3/7.png" alt="tu"></p>
+<p><img src="https://raw.githubusercontent.com/xufanz/markdown-photo/master/3/8.png" alt="tu"></p>
+<p>page创立后可以直接在浏览器输入<a href="https://xufanz.github.io/">https://xufanz.github.io/</a> 看是否创建成功。</p>
+<h2 id="3-将本地文件部署到github上"><a href="#3-将本地文件部署到github上" class="headerlink" title="3.将本地文件部署到github上"></a>3.将本地文件部署到github上</h2><p>进入本地仓库根目录下，用编辑器打开<code>_config.yml</code>，下滑到最下方，修改deploy项，如下（根据你的github项目名进行相应更改）：</p>
+<p><img src="https://raw.githubusercontent.com/xufanz/markdown-photo/master/3/11.png" alt="tu"></p>
+<p><strong>注意！！！冒号的后面一定一定一定要有一个空格！！</strong></p>
+<p>部署上去</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">//先装个插件压压惊</span><br><span class="line">hexo d  //  部署</span><br></pre></td></tr></table></figure>
+<p>此时，我们的博客已经搭建起来，并发布到Github上了，在浏览器访问xufanz.github.io就能看到自己的博客了。</p>
+<h1 id="4-后话"><a href="#4-后话" class="headerlink" title="4.后话"></a>4.后话</h1><ul>
+<li>关于博客的书写，使用的是Markdown语法，markdown的软件也有很多，下载了几个之后，最终选择了atom，至于markdownpad装不上（我也不知道为啥）</li>
+<li>还有一个是关于书写博客插图片的问题，网上的办法层出穷，在此推荐一种比较好理解的，以后有了更好的办法会重新发布。</li>
+</ul>
+<p><strong>插图方法</strong></p>
+<p>利用github仓库，新建一个仓库<code>markdown-photo</code> ,将本地文件部署到github的仓库<code>markdown-photo</code>中，从仓库中选中上传的图片，右键能够复制图片地址，然后按照Markdown语法加入到博客中。切记新建仓库时不要选择私密仓库，不然博客的图片就出不来。<br><img src="https://raw.githubusercontent.com/xufanz/markdown-photo/master/3/66.png" alt="tu"></p>
+<p><em>将文件上传到github的仓库maekdown-photo</em></p>
+<p>在本地建立一个markdown-photo文件夹，并建立一个新文件夹1,（名字自己定，这里取1），将要上传的文件（不管是图片还是其他的文件）放入文件1内，然后输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">touch 1</span><br><span class="line">git add -A</span><br><span class="line">git commit -m &quot;add -A&quot;</span><br><span class="line">git push   //等一会就好了</span><br></pre></td></tr></table></figure>
+<p>我的第一篇博客就这样完成了。2019/10/22/18：18</p>
+
+      
+    </div>
+		
+	
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/xufanz.github.io/tags/Hexo%E6%90%AD%E5%BB%BAblog/" rel="tag"># Hexo搭建blog</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/xufanz.github.io/2019/10/23/my-second-blog/" rel="prev" title="python学习第一课">
+                python学习第一课 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/xufanz.github.io/images/zyy.jpg"
+                alt="zhang yangyang" />
+            
+              <p class="site-author-name" itemprop="name">zhang yangyang</p>
+              <p class="site-description motion-element" itemprop="description">不知道说点啥，就祝大家新年快乐吧！！！</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/xufanz.github.io/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/xufanz.github.io/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/xufanz.github.io/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/xufanz.github.io/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/xufanz" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1459539648@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-搭建环境"><span class="nav-text">1.搭建环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装Git工具"><span class="nav-text">1.安装Git工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装-Node-js"><span class="nav-text">2.安装 Node.js</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-用Hexo在本地搭建博客"><span class="nav-text">2.用Hexo在本地搭建博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装Hexo"><span class="nav-text">1.安装Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建博客目录"><span class="nav-text">2.创建博客目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-主题切换"><span class="nav-text">3.主题切换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-部署本地文件到github"><span class="nav-text">3.部署本地文件到github</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-注册github"><span class="nav-text">1.注册github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-建立远程仓库（配置Github）"><span class="nav-text">2.建立远程仓库（配置Github）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-将本地文件部署到github上"><span class="nav-text">3.将本地文件部署到github上</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-后话"><span class="nav-text">4.后话</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-[object Object]"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">张洋洋</span>
+
+  
+</div>
+
+
+
+
+
+
+
+<div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style='display:none'>
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客啦
+</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/xufanz.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/xufanz.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/xufanz.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/xufanz.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/xufanz.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/xufanz.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/xufanz.github.io/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/xufanz.github.io/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/xufanz.github.io/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/xufanz.github.io/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/xufanz.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/xufanz.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/xufanz.github.io/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/xufanz.github.io/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+<!--动态线条背景-->
+<script type="text/javascript"
+color="54,153,232" opacity='0.5' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!--人体时钟背景透明-->
+<script charset="Shift_JIS" 
+src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js">
+</script>
+
+

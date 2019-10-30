@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/xufanz.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/xufanz.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/xufanz.github.io/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/xufanz.github.io/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/xufanz.github.io/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/xufanz.github.io/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/xufanz.github.io/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Python学习," />
+
+
+
+
+
+  <link rel="alternate" href="/xufanz.github.io/atom.xml" title="栩凡的博客" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="1.第五节Python数值类型整型：整数（长整型）">
+<meta name="keywords" content="Python学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python学习第二课">
+<meta property="og:url" content="https:&#x2F;&#x2F;xufanz.github.io&#x2F;2019&#x2F;10&#x2F;25&#x2F;my-third-blog&#x2F;index.html">
+<meta property="og:site_name" content="栩凡的博客">
+<meta property="og:description" content="1.第五节Python数值类型整型：整数（长整型）">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-30T01:21:47.538Z">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/xufanz.github.io/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://xufanz.github.io/2019/10/25/my-third-blog/"/>
+
+
+
+
+
+  <title>python学习第二课 | 栩凡的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/xufanz.github.io/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栩凡的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">人类的本质都是复读机</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/xufanz.github.io/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/xufanz.github.io/about%20/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/xufanz.github.io/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/xufanz.github.io/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/xufanz.github.io/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/xufanz.github.io/schedule/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xufanz.github.io/xufanz.github.io/2019/10/25/my-third-blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhang yangyang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/xufanz.github.io/images/zyy.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栩凡的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">python学习第二课</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-25T20:57:43+08:00">
+                2019-10-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+		  
+		    <span class="post-meta-divider">|</span>
+		    <span id="busuanzi_value_page_pv"></span>次阅读
+		  
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="1-第五节Python数值类型"><a href="#1-第五节Python数值类型" class="headerlink" title="1.第五节Python数值类型"></a>1.第五节Python数值类型</h1><p>整型：整数（长整型）</p>
+<a id="more"></a>
+<p>布尔类型：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">true\false</span><br><span class="line"></span><br><span class="line">1,0</span><br><span class="line"></span><br><span class="line">1+0=1</span><br><span class="line"></span><br><span class="line">1*0=0</span><br></pre></td></tr></table></figure>
+
+<p>浮点型：小数</p>
+<p>e记法（科学计数法）</p>
+<p>1.55e10</p>
+<p>=15500000000</p>
+<h2 id="4-1类型转换"><a href="#4-1类型转换" class="headerlink" title="4.1类型转换"></a>4.1类型转换</h2><p><code>int（）</code>可以将浮点数、字符串转换为整数.（转换浮点数的时候，去掉小数）</p>
+<p><code>float()</code>可以将整数、字符串转换为浮点数</p>
+<p><code>str()</code>可以将数或任意其他类型转换为字符串</p>
+<h2 id="4-2获取变量类型"><a href="#4-2获取变量类型" class="headerlink" title="4.2获取变量类型"></a>4.2获取变量类型</h2><p><code>type（）</code>获取变量类型</p>
+<p><code>isinstance(a,str)</code>———-输出布尔类型</p>
+<h2 id="4-3问题"><a href="#4-3问题" class="headerlink" title="4.3问题"></a>4.3问题</h2><p><strong>0. 在 Python 中，int 表示整型，那你还记得 bool、float 和 str 分别表示什么吗？</strong></p>
+<p> bool 表示布尔类型<br> float 表示浮点型<br> str 表示字符串</p>
+<p> <strong>1.</strong> <strong>你知道为什么布尔类型(bool)的 True 和 False 分别用 1 和 0 来代替吗？</strong></p>
+<p> 你可能听说过计算机是很“笨”的，究其根本是因为它只认识二进制数，所以所有的编程语言最终都会转换成简单的二进制序列给CPU按照一定的规则解析。<br> 由于二进制只有两个数：0 和 1，因此用 0 和 1 来表示 False 和 True 再适合不过了，因为不用浪费资源在转换的过程上！</p>
+<p> <strong>2.</strong> <strong>使用 int() 将小数转换为整数，结果是向上取整还是向下取整呢？</strong></p>
+<p> 我们可爱的小甲鱼说了，小数取整会采用比较暴力的截断方式，即向下取整。（注：5.5向上取整为6，向下取整为5）</p>
+<p> <strong>3.</strong> <strong>我们人类思维是习惯于“四舍五入”法，你有什么办法使得 int() 按照“四舍五入”的方式取整吗？</strong></p>
+<p> int() 固然没那么“聪明”，但机器是死的，鱼油是活的！<br> 5.4 “四舍五入”结果为：5，int(5.4+0.5) == 5<br> 5.6 “四舍五入”结果为：6，int(5.6+0.5) == 6</p>
+<p> <strong>4.</strong> <strong>取得一个变量的类型，视频中介绍可以使用 type() 和 isinstance()，你更倾向于使用哪个？</strong></p>
+<p> 建议使用 isinstance()，因为它的返回结果比较直接，另外 type() 其实并没有你想象的那么简单，我们后边会讲到。</p>
+<p> <strong>5. Python3</strong> <strong>可以给变量命名中文名，知道为什么吗？</strong></p>
+<p> Pyhton3 源码文件默认使用utf-8编码（支持中文），这就使得以下代码是合法的：<br> &gt;&gt;&gt; 小甲鱼 = ‘我爱你’<br> &gt;&gt;&gt; print(小甲鱼)<br> &gt;&gt;&gt; 我爱你</p>
+<p><strong>0.</strong> <strong>针对视频中小甲鱼提到的小漏洞，再次改进我们的小游戏：当用户输入错误类型的时候，及时提醒用户重新输入，防止程序崩溃。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">\1. import random</span><br><span class="line"></span><br><span class="line">\2. times = 3</span><br><span class="line"></span><br><span class="line">\3. secret = random.randint(1,10)</span><br><span class="line"></span><br><span class="line">\4. print(&apos;------------------我爱鱼C工作室------------------&apos;)</span><br><span class="line"></span><br><span class="line">\5. guess = 0</span><br><span class="line"></span><br><span class="line">\6. print(&quot;不妨猜一下小甲鱼现在心里想的是哪个数字：&quot;, end=&quot; &quot;)</span><br><span class="line"></span><br><span class="line">\7. while (guess != secret) and (times &gt; 0):</span><br><span class="line"></span><br><span class="line">\8.   temp = input()</span><br><span class="line"></span><br><span class="line">\9.   while not temp.isdigit():</span><br><span class="line"></span><br><span class="line">\10.      temp = input(&quot;抱歉，您的输入有误，请输入一个整数：&quot;)</span><br><span class="line"></span><br><span class="line">\11.   guess = int(temp)</span><br><span class="line"></span><br><span class="line">\12.   times = times - 1 # 用户每输入一次，可用机会就-1</span><br><span class="line"></span><br><span class="line">\13.   if guess == secret:</span><br><span class="line"></span><br><span class="line">\14.      print(&quot;我草，你是小甲鱼心里的蛔虫吗？！&quot;)</span><br><span class="line"></span><br><span class="line">\15.      print(&quot;哼，猜中了也没有奖励！&quot;)</span><br><span class="line"></span><br><span class="line">\16.   else:</span><br><span class="line"></span><br><span class="line">\17.      if guess &gt; secret:</span><br><span class="line"></span><br><span class="line">\18.        print(&quot;哥，大了大了~~~&quot;)</span><br><span class="line"></span><br><span class="line">\19.      else:</span><br><span class="line"></span><br><span class="line">\20.        print(&quot;嘿，小了，小了~~~&quot;)</span><br><span class="line"></span><br><span class="line">\21.      if times &gt; 0:</span><br><span class="line"></span><br><span class="line">\22.        print(&quot;再试一次吧：&quot;, end=&quot; &quot;)</span><br><span class="line"></span><br><span class="line">\23.      else:</span><br><span class="line"></span><br><span class="line">\24.        print(&quot;机会用光咯T_T&quot;)</span><br><span class="line"></span><br><span class="line">\25. print(&quot;游戏结束，不玩啦^_^&quot;)</span><br></pre></td></tr></table></figure>
+<p>** <strong>1.</strong> <strong>写一个程序，判断给定年份是否为闰年。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">\1. temp = input(&apos;请输入一个年份：&apos;)</span><br><span class="line"></span><br><span class="line">\2. while not temp.isdigit():</span><br><span class="line"></span><br><span class="line">\3.   temp = input(&quot;抱歉，您的输入有误，请输入一个整数：&quot;)</span><br><span class="line"></span><br><span class="line">\4.  </span><br><span class="line"></span><br><span class="line">\5. year = int(temp)</span><br><span class="line"></span><br><span class="line">\6. if year/400 == int(year/400):</span><br><span class="line"></span><br><span class="line">\7.   print(temp + &apos; 是闰年！&apos;)</span><br><span class="line"></span><br><span class="line">\8. else:</span><br><span class="line"></span><br><span class="line">\9.   if (year/4 == int(year/4)) and (year/100 != int(year/100)):</span><br><span class="line"></span><br><span class="line">\10.      print(temp + &apos; 是闰年！&apos;)</span><br><span class="line"></span><br><span class="line">\11.   else:</span><br><span class="line"></span><br><span class="line">\12.      print(temp + &apos; 不是闰年！&apos;)</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-第六节常用操作符"><a href="#2-第六节常用操作符" class="headerlink" title="2.第六节常用操作符"></a>2.第六节常用操作符</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">+加    </span><br><span class="line"></span><br><span class="line"> a=5</span><br><span class="line"></span><br><span class="line">a +=3</span><br><span class="line"></span><br><span class="line">a=8</span><br><span class="line"></span><br><span class="line">-减</span><br><span class="line"></span><br><span class="line">*乘</span><br><span class="line"></span><br><span class="line">/除</span><br><span class="line"></span><br><span class="line">%          求余数   5%2=1</span><br><span class="line"></span><br><span class="line">**        幂运算2**3=8</span><br><span class="line"></span><br><span class="line">//      整除符号10//8=1</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-优先级问题"><a href="#1-优先级问题" class="headerlink" title="1.优先级问题"></a>1.优先级问题</h2><p>多个运算符出现在一个式子里，考虑优先级问题</p>
+<p>例：  -3*2+5/-2-4=-12.5</p>
+<p>先乘除后加减</p>
+<p>加括号</p>
+<p>-3 ** 2 =-9</p>
+<p>3 ** -2=1/9</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">幂运算----------------**</span><br><span class="line">正负号-----------+   -</span><br><span class="line">算术操作符*  /  //  +  -</span><br><span class="line">比较操作符&lt; &gt; &lt;= &gt;= !=</span><br><span class="line">逻辑运算符not and or</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-比较操作符和逻辑操作符"><a href="#2-比较操作符和逻辑操作符" class="headerlink" title="2.比较操作符和逻辑操作符"></a>2.比较操作符和逻辑操作符</h2><p>二元操作符  ：and     or</p>
+<p>一元操作符：   not   ——–针对布尔类型值</p>
+<h2 id="3-问题"><a href="#3-问题" class="headerlink" title="3.问题"></a>3.问题</h2><p><strong>0. Python 的 floor 除法现在使用 “//” 实现，那 3.0 // 2.0 您目测会显示什么内容呢？</strong></p>
+<p> 如果回答是 1.5 那么很遗憾，您受到 C 语言的影响比较大，Python 这里会义无反顾地执行 floor 除法原则，答案是：1.0</p>
+<p> <strong>1. a &lt; b &lt; c</strong> <strong>事实上是等于？</strong></p>
+<p> (a &lt; b) and (b &lt; c)</p>
+<p> <strong>2.</strong> <strong>不使用 IDLE，你可以轻松说出 5 \</strong> -2 的值吗？**</p>
+<p> 0.04，也就是 1/25</p>
+<p> 幂运算操作符比其左侧的一元操作符优先级高，比其右侧的一元操作符优先级低。</p>
+<p> <strong>3.</strong> <strong>如何简单判断一个数是奇数还是偶数？</strong></p>
+<p> 使用求余可以简单得到答案：能被 2 整除为偶数，所以 x % 2 == 0，否则为奇数。</p>
+<p> <strong>4.</strong> <strong>请用最快速度说出答案：not 1 or 0 and 1 or 3 and 4 or 5 and 6 or 7 and 8 and 9</strong></p>
+<p> 如果你的回答是 0，那么小甲鱼很开心你中招了！<br> 答案是：4</p>
+<p> not or and 的优先级是不同的：not &gt; and &gt; or</p>
+<p> 我们按照优先级给它们加上括号：(not 1) or (0 and 1) or (3 and 4) or (5 and 6) or (7 and 8 and 9)<br> == 0 or 0 or 4 or 6 or 9<br> == 4</p>
+<p> 为啥是 4？</p>
+<p> 大家还记得第四讲作业提到的“短路逻辑”吗？3 and 4 == 4，而 3 or 4 == 3。<br> 所以答案是：4</p>
+<p> <strong>5.</strong> <strong>还记得我们上节课那个求闰年的作业吗？如果还没有学到“求余”操作，还记得用什么方法可以“委曲求全”代替“%”的功能呢？</strong></p>
+<p> 因为上节课我们还没有教大家“求余”的操作，所以小甲鱼使用了“if year/400 == int(year/400)”这样的方式来“委曲求全”。</p>
+<p><strong>0.</strong> <strong>请写一个程序打印出</strong> <strong>0~100</strong> <strong>所有的奇数。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">\1. i = 0</span><br><span class="line"></span><br><span class="line">\2. while i &lt;= 100:</span><br><span class="line"></span><br><span class="line">\3.   if i % 2 != 0:</span><br><span class="line"></span><br><span class="line">\4.      print(i, end=&apos; &apos;)</span><br><span class="line"></span><br><span class="line">\5.      i += 1</span><br><span class="line"></span><br><span class="line">\6.   else:</span><br><span class="line"></span><br><span class="line">\7.      i += 1</span><br></pre></td></tr></table></figure>
+
+
+<p>** <strong>1.</strong> <strong>我们说过现在的</strong> <strong>Python</strong> <strong>可以计算很大很大的数据，但是**</strong>……<strong>**真正的大数据计算可是要靠刚刚的硬件滴，不妨写一个小代码，让你的计算机为之崩溃？</strong></p>
+<p> print(2 ** 2 ** 32)<br> # 一般很多机子都会在一会儿之后：Memory Overflow，内存不够用。<br> # 设计到幂操作，结果都是惊人滴。</p>
+<p> <strong>2.</strong> <strong>题目：请编程求解该阶梯至少有多少阶？</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">\1. x = 7</span><br><span class="line"></span><br><span class="line">\2. i = 1</span><br><span class="line"></span><br><span class="line">\3. flag = 0</span><br><span class="line"></span><br><span class="line">\4.  </span><br><span class="line"></span><br><span class="line">\5. while i &lt;= 100:</span><br><span class="line"></span><br><span class="line">\6.   if (x%2 == 1) and (x%3 == 2) and (x%5 == 4) and (x%6==5):</span><br><span class="line"></span><br><span class="line">\7.      flag = 1</span><br><span class="line"></span><br><span class="line">\8.   else:</span><br><span class="line"></span><br><span class="line">\9.      x = 7 * (i+1) # 根据题意，x一定是7的整数倍，所以每次乘以7</span><br><span class="line"></span><br><span class="line">\10.   i += 1</span><br><span class="line"></span><br><span class="line">\11.  </span><br><span class="line"></span><br><span class="line">\12. if flag == 1:</span><br><span class="line"></span><br><span class="line">\13.   print(&apos;阶梯数是：&apos;, x)</span><br><span class="line"></span><br><span class="line">\14. else:</span><br><span class="line"></span><br><span class="line">\15.   print(&apos;在程序限定的范围内找不到答案！&apos;)</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-第七节分支与循环"><a href="#3-第七节分支与循环" class="headerlink" title="3.第七节分支与循环"></a>3.第七节分支与循环</h1><p><code>elif-----------else if</code></p>
+<p>三元操作符     </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if x &lt; y:</span><br><span class="line">	small =x</span><br><span class="line">else:</span><br><span class="line">	small=y</span><br><span class="line"></span><br><span class="line">	使用三元操作符</span><br><span class="line">	small = x if x &lt; y else y</span><br></pre></td></tr></table></figure>
+
+<p>断言————-自爆程序    用于测试程序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">assert 3 &gt;4</span><br><span class="line"></span><br><span class="line">条件为假的时候，自爆出AssertionError</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-循环"><a href="#1-循环" class="headerlink" title="1.循环"></a>1.循环</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">while 条件：</span><br><span class="line"></span><br><span class="line">​			循环体</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for循环</span><br><span class="line"></span><br><span class="line">语法</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for 目标 in 表达式：</span><br><span class="line"></span><br><span class="line">​			循环体</span><br></pre></td></tr></table></figure>
+
+
+<p>range()</p>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">range语法</span><br><span class="line">range（[start] stop[, step=1]）</span><br><span class="line">step=1                步长为1</span><br><span class="line">作用：生成一个从start参数值到stop参数值结束的数字序列</span><br><span class="line">例子：</span><br><span class="line">list(range(5))</span><br><span class="line">[0,1,2,3,4]</span><br><span class="line"></span><br><span class="line">for i in range(3.8):</span><br><span class="line">	print(i)</span><br><span class="line">	3</span><br><span class="line">	4</span><br><span class="line">	5</span><br><span class="line">	6</span><br><span class="line">	7</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-关键的语句"><a href="#2-关键的语句" class="headerlink" title="2.关键的语句"></a>2.关键的语句</h2><p>break————终止循环跳出循环体</p>
+<p>continue———终止本轮循环，开始下一轮循环</p>
+<ul>
+<li>注意：如果条件为真，则执行下一轮循环，否则跳出循环</li>
+</ul>
+<h2 id="3-问题-1"><a href="#3-问题-1" class="headerlink" title="3.问题"></a>3.问题</h2><p><strong>0. if not (money &lt; 100): 这行代码相当于？</strong></p>
+<p> if money &gt;= 100:</p>
+<p> <strong>1. assert</strong> <strong>的作用是什么？</strong></p>
+<p> assert这个关键字我们称之为“断言”，当这个关键字后边的条件为假的时候，程序自动崩溃并抛出AssertionError的异常。<br> 什么情况下我们会需要这样的代码呢？当我们在测试程序的时候就很好用，因为与其让错误的条件导致程序今后莫名其妙地崩溃，不如在错误条件出现的那一瞬间我们实现“自爆”。<br> 一般来说我们可以用Ta再程序中置入检查点，当需要确保程序中的某个条件一定为真才能让程序正常工作的话，assert关键字就非常有用了。</p>
+<p> <strong>2.</strong> <strong>假设有 x = 1，y = 2，z = 3，请问如何快速将三个变量的值互相交换？</strong></p>
+<p> x, y, z = z, y, x</p>
+<p> <strong>3.</strong> <strong>猜猜 (x &lt; y and [x] or [y])[0] 实现什么样的功能？</strong></p>
+<p> 这其实是 Python 的作者还没有为 Python 加入三元操作符之前，Python 社区的小伙伴们灵活的使用 and 和 or 搭配来实现三元操作符的功能，这里边有涉及到列表和切片的知识，这部分知识很快就会讲解，迫不及待的朋友可以先稍微预习下。</p>
+<p> <strong>4.</strong> <strong>你听说过成员资格运算符吗？</strong></p>
+<p> Python 有一个成员资格运算符：in，用于检查一个值是否在序列中，如果在序列中返回 True，否则返回 False。</p>
+<p> 例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\1. &gt;&gt;&gt; name = &apos;小甲鱼&apos;</span><br><span class="line"></span><br><span class="line">\2. &gt;&gt;&gt; &apos;鱼&apos; in name</span><br><span class="line"></span><br><span class="line">\3. True</span><br><span class="line"></span><br><span class="line">\4. &gt;&gt;&gt; &apos;肥鱼&apos; in name</span><br><span class="line"></span><br><span class="line">\5. False</span><br></pre></td></tr></table></figure>
+
+<p><strong>0.</strong> <strong>视频中小甲鱼使用</strong> <strong>if elif else</strong> <strong>在大多数情况下效率要比全部使用</strong> <strong>if</strong> <strong>要高，但根据一般的统计规律，一个班的成绩一般服从正态分布，也就是说平均成绩一般集中在</strong> <strong>70~80</strong> <strong>分之间，因此根据统计规律，我们还可以改进下程序以提高效率。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">\1. score = int(input(&apos;请输入一个分数：&apos;))</span><br><span class="line"></span><br><span class="line">\2. if 80 &gt; score &gt;= 60:</span><br><span class="line"></span><br><span class="line">\3.   print(&apos;C&apos;)</span><br><span class="line"></span><br><span class="line">\4. elif 90 &gt; score &gt;= 80:</span><br><span class="line"></span><br><span class="line">\5.   print(&apos;B&apos;)</span><br><span class="line"></span><br><span class="line">\6. elif 60 &gt; score &gt;= 0:</span><br><span class="line"></span><br><span class="line">\7.   print(&apos;D&apos;)</span><br><span class="line"></span><br><span class="line">\8. elif 100 &gt;= score &gt;= 90:</span><br><span class="line"></span><br><span class="line">\9.   print(&apos;A&apos;)</span><br><span class="line"></span><br><span class="line">\10. else:</span><br><span class="line"></span><br><span class="line">\11.   print(&apos;输入错误！&apos;)</span><br></pre></td></tr></table></figure>
+
+
+<p>** <strong>1. Python</strong> <strong>的作者在很长一段时间不肯加入三元操作符就是怕跟**</strong>C<strong>**语言一样搞出国际乱码大赛，蛋疼的复杂度让初学者望而生畏，不过，如果你一旦搞清楚了三元操作符的使用技巧，或许一些比较复杂的问题反而迎刃而解。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\1. small = x if (x &lt; y and x &lt; z) else (y if y &lt; z else z)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+		
+	
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/xufanz.github.io/tags/Python%E5%AD%A6%E4%B9%A0/" rel="tag"># Python学习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/xufanz.github.io/2019/10/23/my-second-blog/" rel="next" title="python学习第一课">
+                <i class="fa fa-chevron-left"></i> python学习第一课
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/xufanz.github.io/images/zyy.jpg"
+                alt="zhang yangyang" />
+            
+              <p class="site-author-name" itemprop="name">zhang yangyang</p>
+              <p class="site-description motion-element" itemprop="description">不知道说点啥，就祝大家新年快乐吧！！！</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/xufanz.github.io/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/xufanz.github.io/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/xufanz.github.io/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/xufanz.github.io/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/xufanz" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1459539648@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-第五节Python数值类型"><span class="nav-text">1.第五节Python数值类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1类型转换"><span class="nav-text">4.1类型转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2获取变量类型"><span class="nav-text">4.2获取变量类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3问题"><span class="nav-text">4.3问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-第六节常用操作符"><span class="nav-text">2.第六节常用操作符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-优先级问题"><span class="nav-text">1.优先级问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-比较操作符和逻辑操作符"><span class="nav-text">2.比较操作符和逻辑操作符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-问题"><span class="nav-text">3.问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-第七节分支与循环"><span class="nav-text">3.第七节分支与循环</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-循环"><span class="nav-text">1.循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-关键的语句"><span class="nav-text">2.关键的语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-问题-1"><span class="nav-text">3.问题</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-[object Object]"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">张洋洋</span>
+
+  
+</div>
+
+
+
+
+
+
+
+<div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style='display:none'>
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客啦
+</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/xufanz.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/xufanz.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/xufanz.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/xufanz.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/xufanz.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/xufanz.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/xufanz.github.io/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/xufanz.github.io/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/xufanz.github.io/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/xufanz.github.io/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/xufanz.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/xufanz.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/xufanz.github.io/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/xufanz.github.io/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+<!--动态线条背景-->
+<script type="text/javascript"
+color="54,153,232" opacity='0.5' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!--人体时钟背景透明-->
+<script charset="Shift_JIS" 
+src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js">
+</script>
+
+
